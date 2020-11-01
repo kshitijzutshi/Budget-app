@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="card.css" />
+    <title>App Planning</title>
+  </head>
+  <body>
+    <div style="margin: auto; max-width: 500px;">
+      <div style="margin-left: 30px;">
+        <h2 class="todo" style="margin: auto; padding-left: 175px;">
+          To Do list
+        </h2>
+        <div>
+          <ol>
+            <li style="padding: 10px;">Add Event handler for button</li>
+            <li style="padding: 10px;">Get Input values</li>
+            <li style="padding: 10px;">Add the item to our Data Structure</li>
+            <li style="padding: 10px;">Add the new item to the UI</li>
+            <li style="padding: 10px;">Calculate Budget</li>
+            <li style="padding: 10px;">Update the UI</li>
+          </ol>
+        </div>
+      </div>
+
+      <div>
+        <strong class="general">General Notes</strong>
+        <p>Structuring our code with modules:</p>
+        <ul>
+          <li>Important aspect of any robust application's architecture.</li> <br>
+          <li>
+            Keep the units of code for project cleanly organized and separated.
+          </li>
+          <br>
+          <li>
+            "Encapsulate" some data into privacy and expose other data publicly. Module Pattern consisits of using IIFE and Closure concepts in consideration.
+          </li>
+          <br>
+        </ul>
+        <strong class="learning">What we learn from this project?</strong>
+        <p>We understand the use of MODULE PATTERN.</p>
+        <p>
+          More about private and public data,encapsulation and separation
+          concerns.
+        </p>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <h3>UI Module</h3>
+            <p class="ptag">Get Input values</p>
+            <p class="ptag">Add the new item to the UI</p>
+            <p class="ptag">Update the UI</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h3>Data Module</h3>
+            <p class="ptag">Add the item to our Data Structure</p>
+            <p class="ptag">Calculate Budget</p>
+            <p></p>
+          </div>
+        </div>
+        <div class="row1">
+          <div class="column1">
+            <div class="card">
+              <h3>Controller Module</h3>
+              <p class="ptag">Add Event handler for button</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
