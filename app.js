@@ -48,7 +48,31 @@ var UIController = (
     
     function(){
 
-    // write code here
+        // Too many query selectors, to prevent changes make an object with them.
+        var DOMstrings = {
+            inputType: '.add__type',
+            inputDescription: '.add__description',
+            inputValue: '.add__value',
+            inputBtn: '.add__btn'
+        }
+
+    return {
+        getInput: function(){
+            // use return fn an object as we need to return more variables.
+            return {
+                // type values are - inc(+) or exp(-)
+                type : document.querySelector(DOMstrings.inputType).value,
+                description : document.querySelector(DOMstrings.inputDescription).value,
+                value : document.querySelector(DOMstrings.inputValue).value
+            };
+        },
+
+        getDOMstrings: function(){
+            return{
+                DOMstrings: DOMstrings
+            };
+        }
+    }
 
     }
 )();
@@ -57,23 +81,25 @@ var UIController = (
 var appController = (
     
     function(budgerCtrl, UICtrl){
-        
+
+    var DOM = UICtrl.getDOMstrings();    
     var ctrlAddItem = function(){
 
         // 1. get field input data
+        var input = UICtrl.getInput();
         // 2. Add the item to budget contrl
         // 3. add items to UI
         // 4. Calc budget 
         // 5. Disp the budget
-        console.log("ENTER PRESSED!!!")
+        console.log(DOM);
     } 
 
-    document.querySelector('.add__btn').addEventListener('click',ctrlAddItem)
+    document.querySelector(DOM.DOMstrings.inputBtn).addEventListener('click',ctrlAddItem)
 
     // For enter keypress event listener
     document.addEventListener('keypress', function(event){
 
-        if(event.keyCode === 13 || event.which === 13){
+        if(event.key === 'Enter'){
             
              ctrlAddItem();
         }
